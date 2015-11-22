@@ -1,0 +1,46 @@
+@import "media-queries";
+@import "variables";
+
+.row{
+  display: flex;
+  max-width: $row-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  &.collapse{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .row{
+    margin-left: -$column-gutter;
+    margin-right: -$column-gutter;
+    &.collapse{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+@each $size, $query in ("s": small, "m":medium, "l": large){
+  @include mq($query){
+    @for $i from 1 through 12{
+      .#{$size}-#{$i}{
+        width: calc(100% / 12 * #{$i} - #{$column-gutter} * 2);
+        padding-left: $column-gutter;
+        padding-right: $column-gutter;
+      }
+    }
+    .#{$size}-centered{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .row.#{$size}-collapse{
+      margin-left: -$column-gutter * 2;
+      margin-right: -$column-gutter * 2;
+    }
+    .row.#{$size}-uncollapse{
+      margin-left: -$column-gutter;
+      margin-right: -$column-gutter;
+    }
+  }
+}

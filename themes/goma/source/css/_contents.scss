@@ -1,0 +1,11 @@
+@import "variables";
+
+.contents{
+  // border-left: 1px solid $border-color;
+  // border-right: 1px solid $border-color;
+  // box-shadow: 0 0 20px 4px lighten($primary-color, 35%);
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+  width: 100%;
+}

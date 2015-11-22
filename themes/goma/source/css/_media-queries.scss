@@ -1,0 +1,17 @@
+@import "variables";
+
+@mixin mq($size){
+  $media-types: (small: "screen",
+    small-only: "screen and #{$small-max-width}",
+    medium: "screen and (min-width: #{$medium-min-width})",
+    medium-only: "screen and (min-width: #{$medium-min-width}) and (max-width: #{$medium-max-width})",
+    large: "screen and (min-width: #{$large-min-width})",
+    non-retina: "screen and (-webkit-max-device-pixel-ratio: 1)",
+    retina: "screen and (-webkit-min-device-pixel-ratio: 2)");
+  @if not map-contains($media-types, $size) {
+    @warn "#{$media} is not a known media type.";
+  }
+  @media #{map-get($media-types, $size)} {
+    @content;
+  }
+}
