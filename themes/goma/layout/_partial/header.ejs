@@ -1,0 +1,14 @@
+<header class="header">
+  <h1 class="header__logo">
+    <a href="<%- url_for() %>"><%= config.title %></a>
+  </h1>
+  <nav class="nav">
+    <ul class="nav__menu">
+      <% for (var i in theme.menu){ %>
+        <li>
+          <a href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+        </li>
+      <% } %>
+    </ul>
+  </nav>
+</header>
