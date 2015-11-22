@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<meta charset="UTF-8">
-<head><title>胡麻データ|採用情報</title>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="./test.css">
-<!-- このサイトはジョークサイトです -->
-</head>
-<body>
-<div id="container">
-<div id="menu">
-<img src="./logo.png">
-<ul>
-<li><a href="/goma_data/">TOP</a></li>
-<li><a href="case.html">導入事例</a></li>
-<li><a href="recruit.html">採用情報</a></li>
-<li><a href="about.html">胡麻データについて</a></li>
-</ul> 
-</div>
-<br>
-<h2>採用情報</h2>
-<h4 class="subtitle">募集要項</h4>
+title: 採用情報
+date: 2015-11-22 13:22:24
+---
+
+<h2 class="subtitle">募集要項</h2>
 <dl class="dl3">
 <dt><span class="c_box">■</span>採用予定学科</dt>
 <dd>技術系&nbsp;／&nbsp;電気、電子、情報 他<br>
@@ -34,7 +18,7 @@
 <dd> 随時</dd>
 </dl>
 <p class="qa_u_line">&nbsp;</p>
-<h4 class="subtitle">待遇と勤務</h4>
+<h2 class="subtitle">待遇と勤務</h2>
 <dl class="dl3">
 <dt><span class="c_box">■</span>初任給</dt>
 <dd>大学院卒 &nbsp; 460,000円<br>
@@ -64,11 +48,3 @@
 情報処理教育<br>
 他</dd>
 </dl>
-<div id="boxE">
-<hr>
-<p>Copyright © 2015 GOMA DATA Corporation</p>
-</div>
-
-</div>
-</body>
-</html>

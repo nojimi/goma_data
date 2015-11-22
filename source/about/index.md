@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<meta charset="UTF-8">
-<head><title>胡麻データ|採用情報</title>
-<meta charset="utf-8">
-<link rel="stylesheet" type="text/css" href="./test.css">
-<!-- このサイトはジョークサイトです -->
-</head>
-<body>
-<div id="container">
-<div id="menu">
-<img src="./logo.png">
-<ul>
-<li><a href="/goma_data/">TOP</a></li>
-<li><a href="case.html">導入事例</a></li>
-<li><a href="recruit.html">採用情報</a></li>
-<li><a href="about.html">胡麻データについて</a></li>
-</ul> 
-</div>
+title: 胡麻データについて
+date: 2015-11-22 13:18:30
+---
 
 <table>
 <tbody><tr>
@@ -75,12 +60,3 @@
 </td>
 </tr>
 </tbody></table>
-
-<div id="boxE">
-<hr>
-<p>Copyright © 2015 GOMA DATA Corporation</p>
-</div>
-
-</div>
-</body>
-</html>

@@ -1,0 +1,39 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <div class="article__meta">
+    <% if(!hidden_date){ %>
+      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+    <% } %>
+    <%- partial('post/category') %>
+  </div>
+  <div class="article__body">
+    <%- partial('post/gallery') %>
+    <% if (post.link || post.title){ %>
+      <header class="article__header">
+        <%- partial('post/title', {class_name: 'article__title'}) %>
+      </header>
+    <% } %>
+    <div class="article__entry" itemprop="articleBody">
+      <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+        <% if (theme.excerpt_link){ %>
+          <p class="article__more-link">
+            <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+          </p>
+        <% } %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+    </div>
+  </div>
+  <% if (!index){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+</article>
+
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<% } %>

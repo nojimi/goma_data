@@ -1,0 +1,23 @@
+$primary-color: #4169e1;
+$bg-color: #fcfcfc;
+$border-color: #ccc;
+
+// typography
+
+$font-family: "Avenir Next", "Segoe UI", Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif;
+
+// column settigns
+
+$row-max-width: 70rem;
+$column-gutter: 1rem;
+
+// media query break point
+
+$small-break-point: 480px;
+$medium-break-point: 40rem;
+$large-break-point: 70rem;
+
+$small-max-width: calc(40rem - 1px);
+$medium-min-width: $medium-break-point;
+$medium-max-width: calc($lage-break-point -  1);
+$large-min-width: $large-break-point;

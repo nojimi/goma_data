@@ -1,0 +1,18 @@
+<%- partial('_partial/head') %>
+<body class="<%= page.path === 'index.html' ? 'root' : page.path.substring(0, page.path.lastIndexOf('.')).split('/').join(' ')  %>">
+  <div id="container">
+    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+    <div class="row contents">
+      <div class="s-12">
+        <main>
+          <section><%- body %></section>
+        </main>
+      </div>
+    </div>
+    <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+      <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+    <% } %>
+    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  </div>
+</body>
+</html>

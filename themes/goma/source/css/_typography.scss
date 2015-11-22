@@ -1,0 +1,15 @@
+@import "variables";
+
+@each $pos in (left, center, right){
+  .text-#{$pos}{
+    text-align: $pos;
+  }
+}
+
+@for $i from 1 through 6{
+  h#{$i}{
+    font-size: 2rem - ($i - 1) * .2;
+    font-family: $font-family;
+    margin: .5rem 0 1rem;
+  }
+}
