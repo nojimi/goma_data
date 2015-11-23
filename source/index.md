@@ -6,7 +6,7 @@ controller: index
 
 <div class="row s-collapse m-uncollapse">
   <div class="s-12 text-center root__carousel">
-    <img src="images/top_large.png" alt="これからのインターネットに最適なソリューションを">
+    <img src="images/top01.png" alt="これからのインターネットに最適なソリューションを">
   </div>
 </div>
 
