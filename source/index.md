@@ -22,7 +22,7 @@ controller: index
       <div id="photos">
         <div id="photo0" class="pic"><img src="images/top01.png">
         </div>
-        <div id="photo1" class="pic"><img src="images/top02.png">
+        <div id="photo1" class="pic"><img src="images/top01.png">
 	        <label for="back1"><div id="left1" class="b_left"><span>＜</span></div></label> 
 	        <label for="next1"><div id="right1" class="b_right"><span>＞</span></div></label>
         </div>
