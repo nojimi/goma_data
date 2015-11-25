@@ -6,7 +6,47 @@ controller: index
 
 <div class="row s-collapse m-uncollapse">
   <div class="s-12 text-center root__carousel">
-    <img src="images/top_large.png" alt="これからのインターネットに最適なソリューションを">
+    <div id="stage">
+      
+      <!-- forked by  http://css.programming.jp/?p=933-->
+      <input type="radio" id="back1" name="gal">
+      <input type="radio" id="back2" name="gal">
+      <input type="radio" id="back3" name="gal">
+      <input type="radio" id="back4" name="gal">
+      <input type="radio" id="back5" name="gal">
+      <input type="radio" id="next1" name="gal">
+      <input type="radio" id="next2" name="gal">
+      <input type="radio" id="next3" name="gal">
+      <input type="radio" id="next4" name="gal">
+      <input type="radio" id="next5" name="gal">
+      <div id="photos">
+        <div id="photo0" class="pic"><img src="images/top01.png">
+        </div>
+        <div id="photo1" class="pic"><img src="images/top01.png">
+	        <label for="back1"><div id="left1" class="b_left"><span>＜</span></div></label> 
+	        <label for="next1"><div id="right1" class="b_right"><span>＞</span></div></label>
+        </div>
+        <div id="photo2" class="pic"><img src="images/top03.png">
+	        <label for="back2"><div id="left2" class="b_left"><span>＜</span></div></label>
+    	    <label for="next2"><div id="right2" class="b_right"><span>＞</span></div></label>
+        </div>
+        <div id="photo3" class="pic"><img src="images/top04.png">
+	        <label for="back3"><div id="left3" class="b_left"><span>＜</span></div></label>
+    	    <label for="next3"><div id="right3" class="b_right"><span>＞</span></div></label>
+        </div>
+        <div id="photo4" class="pic"><img src="images/top01.png">
+    	    <label for="back4"><div id="left4" class="b_left"><span>＜</span></div></label>
+    	    <label for="next4"><div id="right4" class="b_right"><span>＞</span></div></label>
+        </div>
+        <div id="photo5" class="pic"><img src="images/top02.png">
+    	    <label for="back5"><div id="left5" class="b_left"><span>＜</span></div></label>
+    	    <label for="next5"><div id="right5" class="b_right"><span>＞</span></div></label>
+        </div>
+        <div id="photo6" class="pic"><img src="images/top01.png">
+        </div>
+      </div>
+      <div style="padding:28%;"></div>
+    </div>
   </div>
 </div>
 

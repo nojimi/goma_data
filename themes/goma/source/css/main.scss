@@ -36,3 +36,425 @@ img{
 }
 
 @import "page/index";
+
+
+
+
+
+
+
+
+
+
+/* forked from http://css.programming.jp/?p=933 */
+
+
+
+/* 表示画面 */
+#stage {
+	position: relative;
+	max-width: 70rem;
+	margin: 0 auto;
+	overflow: hidden;
+}
+/*全ての写真を水平一列に格納したdiv、#photosに,
+スライドショーの animation を設定*/
+#photos {
+	position:absolute;
+	top:0;
+	width:100%;
+	animation: imgPassToLeft0 30s infinite;
+	-webkit-animation: imgPassToLeft0 30s infinite;
+}
+/*各写真の並び位置を設定
+#photo1, #photo2, #photo3, #photo4, #photo5 */
+#photo0 { left:  0%; }
+#photo1 { left:100%; } 
+#photo2 { left:200%; }
+#photo3 { left:300%; }
+#photo4 { left:400%; }
+#photo5 { left:500%; }
+#photo6 { left:600%; }
+.pic { position:absolute;top:0;width:100%; }
+/*写真サイズを可変に*/
+.pic img { width:100%; }
+
+/* 全てのラジオボタンを非表示に */
+#back1,#back2,#back3,#back4,#back5,#next1,#next2,#next3,#next4,#next5{
+	display: none;
+}
+/*送りボタン文字（＜、＞）の設定*/
+.b_left span, .b_right span {
+	position: absolute;
+	font-family: sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	opacity:0;
+	top: 40%;
+	color:#EEE;
+}
+.b_left span {
+	left: 5%;;	
+}
+.b_right span {
+	left: 85%;
+}
+/*ボタン文字hover時の設定*/
+.pic:hover > label div span {
+	opacity:0.5;
+	color:#fff;
+}
+.pic label div span:hover {
+	color:#fff;
+	cursor:pointer;
+}
+/* 各送りボタンクリック時のanimation設定 */
+#next1:checked ~ #photos {
+	animation: imgPassToLeft1 30s infinite;	
+	animation-delay: -4.8s;
+	-webkit-animation: imgPassToLeft1 30s infinite;	
+	-webkit-animation-delay: -4.8s;
+}
+#next2:checked ~ #photos {
+	
+	
+	animation: imgPassToLeft2 30s infinite;
+	animation-delay: -10.8s;
+	-webkit-animation: imgPassToLeft2 30s infinite;
+	-webkit-animation-delay: -10.8s;
+}
+#next3:checked ~ #photos {
+	animation: imgPassToLeft3 30s infinite;
+	animation-delay: -16.8s;
+	-webkit-animation: imgPassToLeft3 30s infinite;
+	-webkit-animation-delay: -16.8s;
+}
+#next4:checked ~ #photos {
+	animation: imgPassToLeft4 30s infinite;
+	animation-delay: -22.8s;
+	-webkit-animation: imgPassToLeft4 30s infinite;
+	-webkit-animation-delay: -22.8s;
+}
+#next5:checked ~ #photos {
+	animation: imgPassToLeft5 30s infinite;
+	animation-delay: -28.8s;
+	-webkit-animation: imgPassToLeft5 30s infinite;
+	-webkit-animation-delay: -28.8s;
+}
+#back1:checked ~ #photos {
+	animation: imgPassToRight1 30s infinite;
+	animation-delay: -28.8s;
+	-webkit-animation: imgPassToRight1 30s infinite;
+	-webkit-animation-delay: -28.8s;
+}
+#back2:checked ~ #photos {
+	animation: imgPassToRight2 30s infinite;
+	animation-delay: -22.8s;
+	-webkit-animation: imgPassToRight2 30s infinite;
+	-webkit-animation-delay: -22.8s;
+}
+#back3:checked ~ #photos {
+	animation: imgPassToRight3 30s infinite;
+	animation-delay: -16.8s;
+	-webkit-animation: imgPassToRight3 30s infinite;
+	-webkit-animation-delay: -16.8s;
+}
+#back4:checked ~ #photos {
+	animation: imgPassToRight4 30s infinite;
+	animation-delay: -10.8s;
+	-webkit-animation: imgPassToRight4 30s infinite;
+	-webkit-animation-delay: -10.8s;
+}
+#back5:checked ~ #photos {
+	animation: imgPassToRight5 30s infinite;
+	animation-delay: -4.8s;
+	-webkit-animation: imgPassToRight5 30s infinite;
+	-webkit-animation-delay: -4.8s;
+}
+/* animation設定 */
+@keyframes imgPassToLeft0 {
+	0%  { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@keyframes imgPassToLeft1 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@keyframes imgPassToLeft2 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@keyframes imgPassToLeft3 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@keyframes imgPassToLeft4 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@keyframes imgPassToLeft5 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@keyframes imgPassToRight1 {
+	0% { left:-500%; }
+	16% { left:-500%; }
+	20% { left:-400%; }
+	36% { left:-400%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-200%; }
+	76% { left:-200%; }
+	80% { left:-100%; }
+	96% { left:-100%; }
+	100% { left:0%; }
+}
+@keyframes imgPassToRight2 {
+	0% { left:-500%; }
+	16% { left:-500%; }
+	20% { left:-400%; }
+	36% { left:-400%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-200%; }
+	76% { left:-200%; }
+	80% { left:-100%; }
+	96% { left:-100%; }
+	100% { left:0%; }
+}
+@keyframes imgPassToRight3 {
+	0% { left:-500%; }
+	16% { left:-500%; }
+	20% { left:-400%; }
+	36% { left:-400%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-200%; }
+	76% { left:-200%; }
+	80% { left:-100%; }
+	96% { left:-100%; }
+	100% { left:0%; }
+}
+@keyframes imgPassToRight4 {
+	0% { left:-500%; }
+	16% { left:-500%; }
+	20% { left:-400%; }
+	36% { left:-400%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-200%; }
+	76% { left:-200%; }
+	80% { left:-100%; }
+	96% { left:-100%; }
+	100% { left:0%; }
+}
+@keyframes imgPassToRight5 {
+	0% { left:-500%; }
+	16% { left:-500%; }
+	20% { left:-400%; }
+	36% { left:-400%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-200%; }
+	76% { left:-200%; }
+	80% { left:-100%; }
+	96% { left:-100%; }
+	100% { left:0%; }
+}
+@-webkit-keyframes imgPassToLeft0 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@-webkit-keyframes imgPassToLeft1 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@-webkit-keyframes imgPassToLeft2 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@-webkit-keyframes imgPassToLeft3 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@-webkit-keyframes imgPassToLeft4 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@-webkit-keyframes imgPassToLeft5 {
+	0% { left:-100%; }
+	16% { left:-100%; }
+	20% { left:-200%; }
+	36% { left:-200%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-400%; }
+	76% { left:-400%; }
+	80% { left:-500%; }
+	96% { left:-500%; }
+	100% { left:-600%; }
+}
+@-webkit-keyframes imgPassToRight1 {
+	0% { left:-500%; }
+	16% { left:-500%; }
+	20% { left:-400%; }
+	36% { left:-400%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-200%; }
+	76% { left:-200%; }
+	80% { left:-100%; }
+	96% { left:-100%; }
+	100% { left:0%; }
+}
+@-webkit-keyframes imgPassToRight2 {
+	0% { left:-500%; }
+	16% { left:-500%; }
+	20% { left:-400%; }
+	36% { left:-400%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-200%; }
+	76% { left:-200%; }
+	80% { left:-100%; }
+	96% { left:-100%; }
+	100% { left:0%; }
+}
+@-webkit-keyframes imgPassToRight3 {
+	0% { left:-500%; }
+	16% { left:-500%; }
+	20% { left:-400%; }
+	36% { left:-400%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-200%; }
+	76% { left:-200%; }
+	80% { left:-100%; }
+	96% { left:-100%; }
+	100% { left:0%; }
+}
+@-webkit-keyframes imgPassToRight4 {
+	0% { left:-500%; }
+	16% { left:-500%; }
+	20% { left:-400%; }
+	36% { left:-400%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-200%; }
+	76% { left:-200%; }
+	80% { left:-100%; }
+	96% { left:-100%; }
+	100% { left:0%; }
+}
+@-webkit-keyframes imgPassToRight5 {
+	0% { left:-500%; }
+	16% { left:-500%; }
+	20% { left:-400%; }
+	36% { left:-400%; }
+	40% { left:-300%; }
+	56% { left:-300%; }
+	60% { left:-200%; }
+	76% { left:-200%; }
+	80% { left:-100%; }
+	96% { left:-100%; }
+	100% { left:0%; }
+}
